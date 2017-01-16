@@ -11,3 +11,5 @@ Submitted <%= time_ago_in_words(@post.created_at) %> ago
 <p>
 <%= @post.body %>
 </p>
+
+<%= link_to "All Posts", posts_path %>
