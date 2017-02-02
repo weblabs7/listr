@@ -15,5 +15,12 @@ Submitted <%= time_ago_in_words(@post.created_at) %> ago
 <%= @post.body %>
 </p>
 
+<div id="comments">
+    <h2><%= @post.comments.count %> Comments</h2>
+    <%= render @post.comments %>
+    <h3> Join Discussion: </h3>
+    <%= render "comments/form" %>
+</div>
+
 <%= link_to "All Posts", root_path %>
 </div>
